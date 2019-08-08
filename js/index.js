@@ -40,3 +40,59 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let anchorTags = document.getElementsByTagName("a");
+anchorTags[0].textContent = siteContent["nav"]["nav-item-1"];
+anchorTags[1].textContent = siteContent["nav"]["nav-item-2"];
+anchorTags[2].textContent = siteContent["nav"]["nav-item-3"];
+anchorTags[3].textContent = siteContent["nav"]["nav-item-4"];
+anchorTags[4].textContent = siteContent["nav"]["nav-item-5"];
+anchorTags[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let h1Tag = document.getElementsByTagName("h1");
+h1Tag[0].textContent = siteContent["cta"]["h1"];
+
+let buttonTag = document.getElementsByTagName("button");
+buttonTag[0].textContent = siteContent["cta"]["button"];
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let h4Tags = document.getElementsByTagName("h4");
+h4Tags[0].textContent = siteContent["main-content"]["features-h4"];
+h4Tags[1].textContent = siteContent["main-content"]["about-h4"];
+h4Tags[2].textContent = siteContent["main-content"]["services-h4"];
+h4Tags[3].textContent = siteContent["main-content"]["product-h4"];
+h4Tags[4].textContent = siteContent["main-content"]["vision-h4"];
+h4Tags[5].textContent = siteContent["contact"]["contact-h4"];
+
+let pTags = document.getElementsByTagName("p");
+pTags[0].textContent = siteContent["main-content"]["features-content"];
+pTags[1].textContent = siteContent["main-content"]["about-content"];
+pTags[2].textContent = siteContent["main-content"]["services-content"];
+pTags[3].textContent = siteContent["main-content"]["product-content"];
+pTags[4].textContent = siteContent["main-content"]["vision-content"];
+pTags[5].textContent = siteContent["contact"]["address"];
+pTags[6].textContent = siteContent["contact"]["phone"];
+pTags[7].textContent = siteContent["contact"]["email"];
+pTags[8].textContent = siteContent["footer"]["copyright"];
+
+let signIn = document.createElement("a");
+signIn.textContent = "Sign In";
+
+let hello = document.createElement("a");
+hello.textContent = "Hello";
+
+navBar = document.getElementsByTagName("nav");
+navBar[0].appendChild(signIn);
+navBar[0].prepend(hello);
+
+for (i=0 ; i<anchorTags.length ; i++){
+  anchorTags[i].style.color = "green";
+}
+
+
+
